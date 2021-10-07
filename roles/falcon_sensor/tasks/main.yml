@@ -1,0 +1,9 @@
+---
+- name: Clone a repository
+  git:
+    repo: '{{ git_repo }}'
+    dest: '{{ project_folder }}'
+    force: yes
+  become: yes
+
+- name: Install falcom from rpm
